@@ -1,6 +1,6 @@
 import { LoadStrategy } from '@mikro-orm/core';
 import { Options } from '@mikro-orm/core';
-import { TsMorphMetadataProvider } from '@mikro-orm/reflection'; 
+import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
 // import { defineConfig } from '@mikro-orm/mysql';
 // import { SqlHighlighter } from '@mikro-orm/sql-highlighter';
 // import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
@@ -8,9 +8,7 @@ import { TsMorphMetadataProvider } from '@mikro-orm/reflection';
 // import { EntityGenerator } from '@mikro-orm/entity-generator';
 // import { SeedManager } from '@mikro-orm/seeder';
 
-
 const config: Options = {
-    
     type: 'postgresql',
     host: 'localhost',
     port: 5432,

@@ -5,6 +5,8 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { TicketsController } from './tickets/tickets.controller';
+import { EventsController } from './events/events.controller';
 
 
 @Module({
@@ -18,7 +20,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     }),
     MikroOrmModule.forRoot(),
     UsersModule],
-  controllers: [AppController],
+  controllers: [AppController, TicketsController, EventsController],
   providers: [AppService],
 })
 export class AppModule {}

@@ -1,0 +1,10 @@
+CREATE TABLE events (
+	
+	name	varchar(50),
+	date	date,
+	adress	varchar(100),
+	city	varchar(25),
+	zipcode	int,
+	tickets	int
+
+);
