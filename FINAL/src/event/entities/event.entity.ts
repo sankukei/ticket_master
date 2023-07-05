@@ -3,6 +3,7 @@ import { Ticket } from 'src/ticket/entities/ticket.entity';
 
 @Entity()
 export class Event {
+
   @PrimaryKey()
   id!: number;
 
@@ -15,7 +16,15 @@ export class Event {
   @Property()
   location!: string;
 
-//   @Collection(() => Ticket)
-  tickets = new Collection<Ticket>(this);
+  @Property()
+  zipcode!: number;
 
+  @Property()
+  adress!: string;
+
+  @Property()
+  ticket!: number;
+
+  // @Collection(() => Ticket)
+  tickets = new Collection<Ticket>(this);
 }

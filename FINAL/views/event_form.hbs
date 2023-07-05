@@ -5,14 +5,19 @@
     <title>Events</title>
   </head>
   <body>
-    {{!-- <p>wow amzinggggggggggggggggggg</p> --}}
-    <form method="get" action="/tickets">
+    <form method="post" action="/event">
         {{!-- <label for="event">Event name</label> --}}
         <input type="text" placeholder="Event name"><br>
         <label for="start">Start date:</label>
         <input type="date" id="start" name="trip-start">
+        <label for="location"></label><br>
+        <input type="text" placeholder="Location" name="location">
+        <input type="number" placeholder="Zipcode">
+        <input type="text" placeholder="Adress">
+        <label for="ticket"></label><br>
+        <input type="number" placeholder="How many tickets">
         <input type="submit" value="Submit">
     </form>
-    {{!-- {{ message }} --}}
+    {{ message }}
   </body>
-</html>
+</html> 

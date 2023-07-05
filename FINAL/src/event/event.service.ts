@@ -1,11 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { CreateEventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
+import { EntityManager } from '@mikro-orm/core';
 
 @Injectable()
 export class EventService {
-  create(createEventDto: CreateEventDto) {
-    return 'This action adds a new event';
+  constructor(private readonly em: EntityManager) {}
+
+  async createEvent(eventData: Partial<Event>): Promise<Event> {
+    const event = this.em.create(Event, eventData);
+    await this.em.persistAndFlush(event);
+    console.log(event)
+    return event;
   }
 
   findAll() {
